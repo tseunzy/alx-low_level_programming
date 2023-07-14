@@ -8,11 +8,13 @@
  */
 int main(void)
 {
-	int lowercase = 'a';
+	int lowerCase = 'a';
 
-	while (lowercase <= 'z')
-		putchar(lowercase);
-		lowercase += 1;
+	while (lowerCase <= 'z')
+	{
+		putchar(lowerCase);
+		lowerCase += 1;
+	}
 		putchar('\n');
 	return (0);
 }
