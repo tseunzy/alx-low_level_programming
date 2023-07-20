@@ -3,7 +3,8 @@
 
 /**
  * main - program that prints the numbers from 1 to 100, followed by a new line. 
- *	  But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz
+ * But for multiples of three print Fizz instead of the number 
+ * for the multiples of five print Buzz
  * Return: Always 0
  */
 
