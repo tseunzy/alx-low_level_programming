@@ -33,8 +33,7 @@ int main(void)
 		{
 			printf("%d", num);
 		}
-		if (num < 100)
-			continue;
+		if (num == 100)
 		printf(" ");
 	}
 	printf("\n");
