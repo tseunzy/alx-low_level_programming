@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_diagsums - funct that prints the sum of the two diag of a squa matx of inte
+ * print_diagsums - funct that prints the sum of the two diag
  * @a: input
  * @size: input
  * Return: Always 0
