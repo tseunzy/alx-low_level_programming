@@ -4,6 +4,8 @@
  * str_concat - a function get ends of input and add together for size
  * @s1: input one to concat
  * @s2: input two to concat
+ * @i: length of s1
+ * @j: length of s2
  * Return: concat of s1 and s2
  */
 char *str_concat(char *s1, char *s2)
