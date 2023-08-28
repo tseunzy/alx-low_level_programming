@@ -1,9 +1,8 @@
 #include "lists.h"
-#include <stdio.h>
 
 int node_is_in_list(const listint_t *node, const listint_t *list[]);
 const listint_t *print_node(const listint_t *node);
-
+size_t print_listint_safe(const listint_t *head);
 
 /**
  * node_is_in_list - Checks if a node is in a list
