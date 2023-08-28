@@ -9,8 +9,6 @@ size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
 
-	if (h == NULL)
-		printf("LInked list is empty");
 	while (h != NULL)
 	{
 		count++;
