@@ -1,8 +1,5 @@
 #include "main.h"
 
-char *allocate_buffer(char *filename);
-void terminate_file(int fd);
-
 /**
  * allocate_buffer - Allocates 1024 bytes for a buffer.
  * @filename: The name of the file buf is storing chars for.
@@ -17,8 +14,7 @@ char *allocate_buffer(char *filename)
 
 	if (buf == NULL)
 	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't write to %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 
@@ -64,7 +60,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	buf = allocate_buffer(argv[2]);
 	source = open(argv[1], O_RDONLY);
 	r_stat = read(source, buf, 1024);
@@ -74,20 +69,17 @@ int main(int argc, char *argv[])
 		if (source == -1 || r_stat == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", argv[1]);
+					"Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
-
 		w_stat = write(dest, buf, r_stat);
 		if (dest == -1 || w_stat == -1)
 		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buf);
 			exit(99);
 		}
-
 		r_stat = read(source, buf, 1024);
 		dest = open(argv[2], O_WRONLY | O_APPEND);
 
@@ -96,7 +88,6 @@ int main(int argc, char *argv[])
 	free(buf);
 	terminate_file(source);
 	terminate_file(dest);
-
 	return (0);
 }
 
